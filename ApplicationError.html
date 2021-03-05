@@ -55,9 +55,18 @@
 				Scripters War Status
 			</div>
 			<div style="margin-left:20px">
+				<p id="rainingchain">
+					The website has been moved to <a href="https://scripterswar.com/">https://scripterswar.com/</a>.
+				</p>
 				<p>Scripters War is currently unavailable.</p>
 				<p style="font-size:1.5em">Check on <a target="_blank" href="https://discord.gg/nf5aszS">Discord</a> or on <a target="_blank" href="https://twitter.com/scripterswar">Twitter</a> for status updates.</p>
 			</div>
 		</div>
 	</body>
+	<script>
+		document.addEventListener("DOMContentLoaded", function(){
+			if(window.location.href.indexOf('rainingchain') === -1)
+				document.getElementById('rainingchain').style.display = 'none';
+		});
+	</script>
 </html>
