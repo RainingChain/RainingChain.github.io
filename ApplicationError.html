@@ -54,10 +54,12 @@
 			<div class="title">
 				Scripters War Status
 			</div>
-			<div style="margin-left:20px">
-				<p id="rainingchain">
-					The website has been moved to <a href="https://scripterswar.com/" target="_blank">https://scripterswar.com/</a>.
+			<div style="margin-left:20px" id="rainingchain">
+        <p>
+					The website has been moved to <a id="redirect" href="https://scripterswar.com/" target="_blank">https://scripterswar.com/</a>.
 				</p>
+      </div>
+			<div style="margin-left:20px" id="sw">
 				<p>Scripters War is currently unavailable.</p>
 				<p style="font-size:1.5em">Check on <a target="_blank" href="https://discord.gg/nf5aszS">Discord</a> or on <a target="_blank" href="https://twitter.com/scripterswar">Twitter</a> for status updates.</p>
 			</div>
@@ -65,8 +67,14 @@
 	</body>
 	<script>
 		document.addEventListener("DOMContentLoaded", function(){
-			if(window.location.href.indexOf('rainingchain') === -1)
+			if(window.location.href.indexOf('rainingchain') === -1){
 				document.getElementById('rainingchain').style.display = 'none';
+      } else {
+				document.getElementById('sw').style.display = 'none';
+        let a = document.getElementById('redirect');
+        a.href = window.location.href.replace('rainingchain','scripterswar');
+        a.innerText = a.href;
+      }
 		});
 	</script>
 </html>
