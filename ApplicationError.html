@@ -66,15 +66,12 @@
 		</div>
 	</body>
 	<script>
-		document.addEventListener("DOMContentLoaded", function(){
-			if(window.location.href.indexOf('rainingchain') === -1){
-				document.getElementById('rainingchain').style.display = 'none';
-      } else {
-				document.getElementById('sw').style.display = 'none';
-        let a = document.getElementById('redirect');
-        a.href = window.location.href.replace('rainingchain','scripterswar');
-        a.innerText = a.href;
-      }
-		});
+	document.addEventListener("DOMContentLoaded", function(){
+		if(window.location.href.toLowerCase().indexOf('rainingchain') === -1){
+			document.getElementById('rainingchain').style.display = 'none';
+		} else {
+			document.getElementById('sw').style.display = 'none';
+		}
+	});
 	</script>
 </html>
